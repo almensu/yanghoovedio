@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YanghooVedio UI Clone
 
-## Getting Started
+这个项目是YanghooVedio应用程序的UI克隆，它是一个用于将语音转换为文本的工具，支持YouTube、播客和本地录音等多种来源。
 
-First, run the development server:
+## 复制的功能
+
+- 带有文件夹和菜单项的侧边栏导航
+- 带有欢迎信息的主内容区域
+- YouTube/Podcast链接、文本转语音和录音的功能卡片
+- 媒体过滤选项
+- 带有缩略图和元数据的视频网格
+- 响应式设计
+
+## 使用的技术
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Lucide React 图标库
+
+## 开始使用
+
+首先，安装依赖项：
+
+```bash
+npm install
+```
+
+然后，运行开发服务器：
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+用浏览器打开 [http://localhost:3000](http://localhost:3000) 查看结果。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 项目结构
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/components/` - UI组件
+  - `Sidebar.tsx` - 左侧导航栏
+  - `MainContent.tsx` - 带有视频的主内容区域
+  - `VideoCard.tsx` - 用于显示视频的卡片组件
 
-## Learn More
+- `src/app/` - Next.js应用路由页面
+  - `page.tsx` - 组合组件的主页面
+  - `layout.tsx` - 带有元数据的根布局
 
-To learn more about Next.js, take a look at the following resources:
+## 注意
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+这是一个用于演示目的的静态UI克隆。功能（如播放视频或将语音转换为文本）未实现。
