@@ -84,16 +84,16 @@ const MainContent = () => {
   ];
 
   return (
-    <div className="flex-1 overflow-auto bg-white scrollbar-thin">
+    <div className="flex-1 overflow-auto bg-[#f9fafb] scrollbar-thin">
       {/* 欢迎标题 */}
       <div className="p-8 pb-4">
         <h1 className="text-2xl font-medium text-yanghoo-text">欢迎使用 <span className="text-yanghoo-blue font-semibold">Yanghoo Vedio</span> 语音转文字。</h1>
       </div>
 
       {/* 功能卡片区域 */}
-      <div className="px-8 py-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="px-8 py-4 grid grid-cols-2 gap-4">
         {/* YouTube和播客链接卡片 */}
-        <div className="bg-yanghoo-gray rounded-xl p-4 flex items-center hover:shadow-card transition-all hover:bg-white border border-transparent hover:border-yanghoo-border">
+        <div className="col-span-2 bg-[#f5f7ff] rounded-xl p-5 flex items-center hover:shadow-md transition-all border border-transparent hover:border-yanghoo-border">
           <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
             <Globe className="text-yanghoo-blue" size={20} />
           </div>
@@ -101,28 +101,43 @@ const MainContent = () => {
         </div>
 
         {/* 文本转语音卡片 */}
-        <div className="bg-yanghoo-gray rounded-xl p-4 flex items-center hover:shadow-card transition-all hover:bg-white border border-transparent hover:border-yanghoo-border">
+        <div className="bg-[#f7f7ff] rounded-xl p-5 flex items-center hover:shadow-md transition-all border border-transparent hover:border-yanghoo-border">
           <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
             <FileText className="text-indigo-600" size={20} />
           </div>
-          <span className="text-sm text-yanghoo-text-secondary">文本转语音</span>
+          <div className="flex flex-col">
+            <span className="text-sm text-yanghoo-text-secondary font-medium">文本转语音</span>
+            <span className="text-xs text-gray-500 mt-1">简单文字转语音</span>
+          </div>
         </div>
 
         {/* 录音转文字卡片 */}
-        <div className="bg-yanghoo-gray rounded-xl p-4 flex items-center hover:shadow-card transition-all hover:bg-white border border-transparent hover:border-yanghoo-border">
+        <div className="bg-[#f9f5ff] rounded-xl p-5 flex items-center hover:shadow-md transition-all border border-transparent hover:border-yanghoo-border">
           <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
             <Mic className="text-purple-600" size={20} />
           </div>
-          <span className="text-sm text-yanghoo-text-secondary">本地实时录音转换文字</span>
+          <div className="flex flex-col">
+            <span className="text-sm text-yanghoo-text-secondary font-medium">录制</span>
+            <span className="text-xs text-gray-500 mt-1">本地实时录音转换文字</span>
+          </div>
         </div>
       </div>
 
       {/* 媒体选择栏 */}
       <div className="sticky top-0 z-10 bg-white px-8 py-4 flex items-center border-b border-yanghoo-border">
-        <div className="flex space-x-2">
-          <button className="px-4 py-1.5 text-sm font-medium rounded-full bg-yanghoo-gray text-yanghoo-text shadow-sm hover:shadow transition-shadow">全部</button>
-          <button className="px-4 py-1.5 text-sm font-medium rounded-full text-gray-500 hover:bg-yanghoo-gray transition-colors">视频</button>
-          <button className="px-4 py-1.5 text-sm font-medium rounded-full text-gray-500 hover:bg-yanghoo-gray transition-colors">音频</button>
+        <div className="flex space-x-3">
+          <button className="px-4 py-1.5 text-sm font-medium rounded-full bg-[#f5f7ff] text-yanghoo-text shadow-sm hover:shadow transition-shadow">
+            选择本地媒体
+            <span className="text-xs text-gray-500 ml-1">MP4、MP3、AAC、M4A 等...</span>
+          </button>
+          <button className="px-4 py-1.5 text-sm font-medium rounded-full text-gray-500 hover:bg-yanghoo-gray transition-colors">
+            文本转语音
+            <span className="text-xs text-gray-500 ml-1">简单文字转语音</span>
+          </button>
+          <button className="px-4 py-1.5 text-sm font-medium rounded-full text-gray-500 hover:bg-yanghoo-gray transition-colors">
+            录制
+            <span className="text-xs text-gray-500 ml-1">本地实时录音转换文字</span>
+          </button>
         </div>
         <div className="ml-auto flex items-center space-x-2">
           <button className="p-1.5 rounded hover:bg-yanghoo-gray transition-colors">
